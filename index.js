@@ -19,7 +19,8 @@ const flavors = userInput.split (',');
 //  create an array of flavor choices based on userInput
 
 for (const flavor of flavors) {
-  if (yogurt.hasOwnProperty (flavor.toLowerCase ())) yogurt[flavor]++;
+  const editedInput = flavor.trim ().toLowerCase ();
+  if (yogurt.hasOwnProperty (editedInput)) yogurt[editedInput]++;
 }
 
 for (const flavor in yogurt) {
